@@ -1,20 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <!--
+      Package visibility (Android 11+): declare that we look for apps able to open
+      web links, so queryIntentActivities/resolveActivity in UrlLauncher can see the
+      installed browsers we hand the rewritten URL off to.
+    -->
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SkipThePaywall">
+        android:theme="@style/Theme.BypassPaywallsAndroid">
 
         <!-- Settings / service picker screen, shown when the app is launched normally. -->
         <activity
             android:name=".MainActivity"
             android:exported="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.SkipThePaywall">
+            android:theme="@style/Theme.BypassPaywallsAndroid">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -31,8 +43,7 @@
             android:exported="true"
             android:excludeFromRecents="true"
             android:noHistory="true"
-            android:label="@string/app_name"
-            android:theme="@style/Theme.SkipThePaywall.Transparent">
+            android:theme="@style/Theme.BypassPaywallsAndroid.Transparent">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />

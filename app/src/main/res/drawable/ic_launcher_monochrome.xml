@@ -1,0 +1,38 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!--
+      Single-color silhouette for themed ("monochrome") launcher icons. The system
+      tints this to one color, so it is drawn with strokes only (no large solid fill)
+      to keep the document-with-slash shape legible after tinting.
+    -->
+    <!-- document outline -->
+    <path
+        android:pathData="M34,26 L74,26 A4,4 0 0 1 78,30 L78,82 A4,4 0 0 1 74,86 L34,86 A4,4 0 0 1 30,82 L30,30 A4,4 0 0 1 34,26 Z"
+        android:strokeColor="#000000"
+        android:strokeWidth="4" />
+    <!-- text lines -->
+    <path
+        android:pathData="M40,40 L68,40"
+        android:strokeColor="#000000"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M40,50 L68,50"
+        android:strokeColor="#000000"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+    <path
+        android:pathData="M40,60 L58,60"
+        android:strokeColor="#000000"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+    <!-- skip / bypass slash -->
+    <path
+        android:pathData="M24,24 L84,84"
+        android:strokeColor="#000000"
+        android:strokeWidth="10"
+        android:strokeLineCap="round" />
+</vector>
