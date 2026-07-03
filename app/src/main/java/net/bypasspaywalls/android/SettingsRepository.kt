@@ -38,7 +38,7 @@ class SettingsRepository(context: Context) {
         getAllServices().find { it.id == getSelectedServiceId() } ?: BypassService.DEFAULTS.first()
 
     companion object {
-        private const val PREFS_NAME = "skip_the_paywall_prefs"
+        private const val PREFS_NAME = "bypass_paywalls_android_prefs"
         private const val KEY_CUSTOM_SERVICES = "custom_services"
         private const val KEY_SELECTED_SERVICE = "selected_service_id"
     }

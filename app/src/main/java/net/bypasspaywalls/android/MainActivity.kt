@@ -43,15 +43,15 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import java.util.UUID
-import net.bypasspaywalls.android.ui.theme.SkipThePaywallTheme
+import net.bypasspaywalls.android.ui.theme.BypassPaywallsAndroidTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            SkipThePaywallTheme {
+            BypassPaywallsAndroidTheme {
                 Surface(modifier = Modifier.fillMaxSize()) {
-                    SkipThePaywallScreen()
+                    BypassPaywallsAndroidScreen()
                 }
             }
         }
@@ -60,7 +60,7 @@ class MainActivity : ComponentActivity() {
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun SkipThePaywallScreen() {
+fun BypassPaywallsAndroidScreen() {
     val context = LocalContext.current
     val repository = remember { SettingsRepository(context) }
 

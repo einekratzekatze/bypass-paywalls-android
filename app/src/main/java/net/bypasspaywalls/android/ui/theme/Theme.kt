@@ -24,7 +24,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun SkipThePaywallTheme(
+fun BypassPaywallsAndroidTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     dynamicColor: Boolean = true,
     content: @Composable () -> Unit,

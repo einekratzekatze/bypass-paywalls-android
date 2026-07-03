@@ -1,14 +1,14 @@
-# Skip the Paywall
+# Bypass Paywalls Android
 
 An Android app that reopens any article link through a bypass/archive service you choose,
 instead of hitting the paywall.
 
 ## How it works
 
-- **Share a link to the app.** From your browser or any app, share an article URL — Skip the
-  Paywall shows up in the share sheet. It rewrites the link using your selected service and
-  opens the result in your browser.
-- **Or open a link with it.** Long-press a link and choose "Open with… Skip the Paywall" to do
+- **Share a link to the app.** From your browser or any app, share an article URL — Bypass
+  Paywalls Android shows up in the share sheet. It rewrites the link using your selected service
+  and opens the result in your browser.
+- **Or open a link with it.** Long-press a link and choose "Open with… Bypass Paywalls Android" to do
   the same thing without leaving the share sheet.
 - **Or paste a URL directly** into the app's "Try it now" field.
 

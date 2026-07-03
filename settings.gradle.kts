@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Skip the Paywall"
+rootProject.name = "Bypass Paywalls Android"
 include(":app")
