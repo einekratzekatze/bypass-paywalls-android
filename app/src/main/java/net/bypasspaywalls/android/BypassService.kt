@@ -43,20 +43,13 @@ data class BypassService(
             isCustom = json.optBoolean("isCustom", true),
         )
 
-        /** Built-in, well-known paywall bypass / archive services. */
+        /**
+         * Built-in, well-known paywall bypass / archive services, ordered by how well
+         * they worked when last verified (July 2026). removepaywall.com is the default
+         * (confirmed working end-to-end). 12ft.io and 1ft.io were removed (both shut
+         * down), and Freedium moved off the dead freedium.cfd domain.
+         */
         val DEFAULTS: List<BypassService> = listOf(
-            BypassService(
-                id = "12ft",
-                name = "12ft.io",
-                urlTemplate = "https://12ft.io/proxy?q={url}",
-                encodeUrl = true,
-            ),
-            BypassService(
-                id = "freedium",
-                name = "Freedium (Medium articles)",
-                urlTemplate = "https://freedium.cfd/{url}",
-                encodeUrl = false,
-            ),
             BypassService(
                 id = "removepaywall",
                 name = "removepaywall.com",
@@ -64,8 +57,26 @@ data class BypassService(
                 encodeUrl = false,
             ),
             BypassService(
+                id = "smry",
+                name = "smry.ai",
+                urlTemplate = "https://smry.ai/{url}",
+                encodeUrl = false,
+            ),
+            BypassService(
+                id = "wayback",
+                name = "Wayback Machine (Internet Archive)",
+                urlTemplate = "https://web.archive.org/web/2999/{url}",
+                encodeUrl = false,
+            ),
+            BypassService(
+                id = "freedium",
+                name = "Freedium (Medium articles)",
+                urlTemplate = "https://freedium-mirror.cfd/{url}",
+                encodeUrl = false,
+            ),
+            BypassService(
                 id = "archive_ph",
-                name = "archive.ph (latest snapshot)",
+                name = "archive.today (archive.ph)",
                 urlTemplate = "https://archive.ph/newest/{url}",
                 encodeUrl = false,
             ),

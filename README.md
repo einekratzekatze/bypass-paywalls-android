@@ -18,10 +18,11 @@ The app ships with a few well-known bypass/archive services:
 
 | Service | How it rewrites the URL |
 | --- | --- |
-| 12ft.io | `https://12ft.io/proxy?q=<encoded url>` |
-| Freedium | `https://freedium.cfd/<url>` (good for Medium articles) |
-| removepaywall.com | `https://removepaywall.com/<url>` |
-| archive.ph | `https://archive.ph/newest/<url>` |
+| removepaywall.com | `https://removepaywall.com/<url>` (default) |
+| smry.ai | `https://smry.ai/<url>` |
+| Wayback Machine | `https://web.archive.org/web/2999/<url>` (redirects to the latest snapshot) |
+| Freedium | `https://freedium-mirror.cfd/<url>` (good for Medium articles) |
+| archive.today | `https://archive.ph/newest/<url>` |
 
 Pick which one is active from the main screen. You can also add your own by supplying a name
 and a URL template containing the `{url}` token, e.g. `https://example.com/read?u={url}`, and
